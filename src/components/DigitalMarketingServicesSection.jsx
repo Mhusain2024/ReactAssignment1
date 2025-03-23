@@ -24,7 +24,7 @@ const DigitalMarketingServicesSection = () => {
           {/* Right Column */}
           <div className="w-full lg:w-5/12" data-aos="fade-left">
             <img
-              src="assets/Group1.png" // Replace with your image URL
+              src="assets/Group1.png" 
               alt="Digital Marketing"
               className="mt-8 max-w-full h-auto"
             />
@@ -36,7 +36,7 @@ const DigitalMarketingServicesSection = () => {
           {/* Left Column */}
           <div className="w-full lg:w-7/12 order-2 lg:order-1" data-aos="fade-right">
             <img
-              src="assets/Group2.png" // Replace with your image URL
+              src="assets/Group2.png" 
               alt="Digital Agency"
               className="mt-8 max-w-full h-auto"            />
           </div>
