@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#navbar {
+  transition: all 0.3s ease; /* Smooth transition for sticky effect */
+}
+
+#navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow when sticky */
+}
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+.nav-item {
+  list-style: none; /* Removes bullet points */
+}
+
+.nav-link {
+  text-decoration: none; /* Removes underline */
+  color: black; /* Sets text color */
+  padding: 0.5rem 1rem; /* Adds spacing */
+  display: inline-block; /* Ensures proper alignment */
+}
+
+.nav-link.active {
+  font-weight: bold; /* Highlights active link */
+  color: red; /* Changes color for active link */
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Aligns logo to the left and menu items to the right */
+  align-items: center; /* Vertically centers the content */
+  padding: 0 20px; /* Adds spacing around the navbar */
+}
+
+.menu-items {
+  display: flex;
+  gap: 1rem; /* Adds spacing between menu items */
+  float:left;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: black;
+}
+
+header#header-section {
+  background-color: #fff;
+}
+
+.banner-section {
+  background-color: #f9fafb;
+}
+
+.seo-marketing-section {
+  background-color: #f9fafb;
+}
+
+.features-overview{
+  background-color: #f9fafb;
+}
+
+.img-fluid, .img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+/* .feature-card {
+  @apply p-6 bg-white rounded-lg shadow-md text-center;
+} */
+
+
+/* Container for pagination */
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Style for inactive pagination bullets */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  opacity: 1; /* Make bullets fully visible */
+  margin: 0 5px; /* Add spacing between bullets */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Style for the active pagination bullet */
+.swiper-pagination-bullet-active {
+  background-color: #3b82f6; /* Color of the active bullet */
+  width: 20px; /* Slightly larger size for the active bullet */
+  border-radius: 5px; /* Optional: Change shape to an oval */
+}
+
+.contact-us {
+  background-color: transparent; /* Ensure no solid color overrides the image */
+}
+.contact-us .contact-us-bgimage {
+  background-image: url(assets/gdpr.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 83px 0 68px;
+}
+
+.card {
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Ensures content stays within rounded corners */
+}
+.color-cards {
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.color-cards:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
