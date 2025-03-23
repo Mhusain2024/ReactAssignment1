@@ -1,6 +1,6 @@
 // src/components/CaseStudies.js
 import React from 'react';
-import CaseStudyCard from './CaseStudyCard';
+import CaseStudyCard from './CaseStudyCard.jsx';
 
 const caseStudiesData = [
   {

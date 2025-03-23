@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Logo from './Logo';
-import NavLinks from './NavLinks';
-import ActionButton from './ActionButton';
+import Logo from './Logo.jsx';
+import NavLinks from './NavLinks.jsx';
+import ActionButton from './ActionButton.jsx';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

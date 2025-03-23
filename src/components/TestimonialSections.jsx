@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css'; // Core Swiper styles
 import 'swiper/css/pagination'; // Pagination module styles
-import { TestimonialCard } from './TestimonialCard';
+import { TestimonialCard } from './TestimonialCard.jsx';
 
 const testimonials = [
   {

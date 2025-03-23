@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Use Routes instead of Switch
-import BannerSection from './components/BannerSection';
-import FeaturesOverview from './components/FeaturesOverview';
-import DigitalMarketingServicesSection from './components/DigitalMarketingServicesSection';
-import TestimonialSections from './components/TestimonialSections';
-import CaseStudies from './components/CaseStudies';
-import ContactUsSection from './components/ContactUsSection';
-import ContactDetails from './components/ContactDetails';
-import Footer from './components/Footer';
-import Navbar from './components/NavBar';
+import BannerSection from './components/BannerSection.jsx';
+import FeaturesOverview from './components/FeaturesOverview.jsx';
+import DigitalMarketingServicesSection from './components/DigitalMarketingServicesSection.jsx';
+import TestimonialSections from './components/TestimonialSections.jsx';
+import CaseStudies from './components/CaseStudies.jsx';
+import ContactUsSection from './components/ContactUsSection.jsx';
+import ContactDetails from './components/ContactDetails.jsx';
+import Footer from './components/Footer.jsx';
+import Navbar from './components/NavBar.jsx';
 
 function App() {
   return (
