@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Logo from './Logo.jsx';
-import NavLinks from './NavLinks.jsx';
-import ActionButton from './ActionButton.jsx';
+import Logo from './Logo';
+import NavLinks from './NavLinks';
+import ActionButton from './ActionButton';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,7 @@ const Navbar = () => {
   // Add scroll event listener
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 30) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -26,29 +26,37 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 flex items-center justify-between py-3 px-4 md:px-8 lg:px-12 bg-white shadow-md z-30 transition-all duration-300 ${
-      isScrolled ? 'shadow-lg' : 'shadow-md'
+    <nav className={`fixed top-0 left-0 right-0 flex items-center justify-between transition-all duration-300 z-30 ${
+      isScrolled 
+        ? 'py-2 px-4 md:px-6 bg-white shadow-lg' 
+        : 'py-4 px-4 md:px-8 lg:px-12 bg-gray-50'
     }`}>
-      {/* Left Side: Logo */}
+      {/* Left Side: Logo (with conditional sizing) */}
       <div className="flex items-center">
-        <Logo />
+        <div className={`transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
+          <Logo />
+        </div>
       </div>
 
       {/* Desktop Navigation (Hidden on mobile) */}
       <div className="hidden lg:flex flex-grow justify-center">
-        <ul className="flex gap-4">
+        <ul className={`flex gap-4 transition-all duration-300 ${isScrolled ? 'text-white text-sm' : 'text-gray-800'}`}>
           <NavLinks />
         </ul>
       </div>
 
       {/* Desktop Action Button (Hidden on mobile) */}
       <div className="hidden lg:flex items-center">
-        <ActionButton />
+        <div className={`transition-all duration-300 ${isScrolled ? 'scale-95' : 'scale-100'}`}>
+          <ActionButton />
+        </div>
       </div>
 
       {/* Hamburger Menu Toggle (Mobile only) */}
       <button
-        className="lg:hidden text-gray-700 focus:outline-none"
+        className={`lg:hidden focus:outline-none transition-colors duration-300 ${
+          isScrolled ? 'text-white' : 'text-gray-700'
+        }`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <svg
