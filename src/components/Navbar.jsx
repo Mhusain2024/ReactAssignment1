@@ -26,11 +26,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 flex items-center justify-between transition-all duration-300 z-30 ${
+    <nav className={`fixed top-0 left-0 right-0 flex items-center justify-between transition-all duration-300 ease-in-out z-30 ${
       isScrolled 
-        ? 'py-2 px-4 md:px-6 bg-white shadow-lg' 
+        ? 'py-2 px-4 md:px-6 bg-white' 
         : 'py-4 px-4 md:px-8 lg:px-12 bg-gray-50'
-      }`}>
+    }`}>
       {/* Left Side: Logo (with conditional sizing) */}
       <div className="flex items-center">
         <div className={`transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Navigation (Hidden on mobile) */}
-      <div className="hidden lg:flex flex-grow justify-center ">
+      <div className="hidden lg:flex flex-grow justify-center">
         <ul className={`flex gap-4 transition-all duration-300 ${isScrolled ? 'text-white text-sm' : 'text-gray-800'}`}>
           <NavLinks />
         </ul>
@@ -52,16 +52,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Hamburger Menu Toggle (Mobile only) */}
+      {/* Hamburger Menu Toggle (Mobile only) - Fixed visibility issue */}
       <button
-        className={`lg:hidden focus:outline-none py-4 transition-colors duration-300 ${
-          isScrolled ? 'text-white' : 'text-gray-700'
-        }`}
+        className="lg:hidden focus:outline-none transition-colors duration-300"
         onClick={() => setIsOpen(!isOpen)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
+          className={`h-6 w-6 ${isScrolled ? 'text-black' : 'text-gray-700'}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -104,7 +102,7 @@ const Navbar = () => {
           </button>
 
           {/* Navigation Links (Mobile) */}
-          <ul className="flex flex-col py-4 gap-4 mt-8">
+          <ul className="flex flex-col gap-4 mt-8">
             <NavLinks />
           </ul>
 
