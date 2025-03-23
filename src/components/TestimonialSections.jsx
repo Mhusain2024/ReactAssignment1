@@ -43,7 +43,7 @@ const testimonials = [
 
 const TestimonialSections = () => {
   return (
-    <section className="customer-feedback py-16 bg-white">
+    <section className="customer-feedback py-16 bg-white" id="feedback-section">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">

@@ -30,7 +30,7 @@ const Navbar = () => {
       isScrolled 
         ? 'py-2 px-4 md:px-6 bg-white shadow-lg' 
         : 'py-4 px-4 md:px-8 lg:px-12 bg-gray-50'
-    }`}>
+      }`}>
       {/* Left Side: Logo (with conditional sizing) */}
       <div className="flex items-center">
         <div className={`transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Navigation (Hidden on mobile) */}
-      <div className="hidden lg:flex flex-grow justify-center">
+      <div className="hidden lg:flex flex-grow justify-center ">
         <ul className={`flex gap-4 transition-all duration-300 ${isScrolled ? 'text-white text-sm' : 'text-gray-800'}`}>
           <NavLinks />
         </ul>
@@ -54,7 +54,7 @@ const Navbar = () => {
 
       {/* Hamburger Menu Toggle (Mobile only) */}
       <button
-        className={`lg:hidden focus:outline-none transition-colors duration-300 ${
+        className={`lg:hidden focus:outline-none py-4 transition-colors duration-300 ${
           isScrolled ? 'text-white' : 'text-gray-700'
         }`}
         onClick={() => setIsOpen(!isOpen)}
@@ -104,7 +104,7 @@ const Navbar = () => {
           </button>
 
           {/* Navigation Links (Mobile) */}
-          <ul className="flex flex-col gap-4 mt-8">
+          <ul className="flex flex-col py-4 gap-4 mt-8">
             <NavLinks />
           </ul>
 

@@ -3,7 +3,7 @@ import React from 'react';
 
 const BannerSection = () => {
   return (
-        <section className="banner-section bg-gray-100 py-16">
+        <section className="banner-section bg-gray-100 py-16" id="header-section">
           <div className="container mx-auto px-4 text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-4">Search engine optimisation &amp;<br />Marketing.</h1>
         <p className="text-lg md:text-xl text-gray-700 mb-8">

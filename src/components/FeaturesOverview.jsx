@@ -24,7 +24,7 @@ const featuresData = [
 
 const FeaturesOverview = () => {
   return (
-    <section className="features-overview py-16 bg-white">
+    <section className="features-overview py-16 bg-white" id="features-section">
       <div className="container mx-auto px-4 text-center">
         {/* Section Header */}
         <div className="text-center mb-8">
